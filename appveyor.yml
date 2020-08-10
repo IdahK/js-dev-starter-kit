@@ -1,0 +1,21 @@
+#Use this version of node.js
+environment:
+  matrix:
+    - nodejs_version: "6"
+
+# Install scripts.
+install:
+  #Get the latest stable version of Nodejs or io.js
+  - ps: Install-Product node $env:nodejs_version
+  # install modules
+  - npm install
+
+test_script:
+  #Useful info for debugging
+  - node --version
+  - npm --version
+  # run defined tests
+  - npm test
+
+#Dont actually build
+build: off
