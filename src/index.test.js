@@ -24,3 +24,5 @@ describe('index.html',() => {
      });
   });
 });
+
+//this file integrates with Travis CI Integration Server
