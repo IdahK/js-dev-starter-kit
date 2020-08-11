@@ -1,5 +1,8 @@
 import 'whatwg-fetch';
+import getBaseUrl from './baseUrl';
 /* eslint-disable no-console*/
+
+const baseUrl = getBaseUrl();
 
 //the public function
 export function getUsers(){
@@ -7,7 +10,10 @@ export function getUsers(){
 }
 
 function get(url){
-  return fetch(url).then(onSuccess, onError);
+  //change url based on environment: dev or production
+  // return fetch(url).then(onSuccess, onError);
+
+  return fetch(baseUrl + url).then(onSuccess, onError);
 }
 
 function onSuccess(response){
