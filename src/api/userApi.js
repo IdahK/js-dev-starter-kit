@@ -1,4 +1,5 @@
 import 'whatwg-fetch';
+/* eslint-disable no-console*/
 
 //the public function
 export function getUsers(){
