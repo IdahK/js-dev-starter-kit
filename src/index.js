@@ -1,5 +1,5 @@
 import './index.css';  //this will be implemented by Webpack as a function
-import {getUsers} from './api/userApi';
+import {getUsers, deleteUser} from './api/userApi';
 
 //Populate table of users via API call
 getUsers().then(result => {
@@ -19,6 +19,23 @@ getUsers().then(result => {
   });
 
   global.document.getElementById('users').innerHTML=usersBody;
+
+  //gets references for all the delete anchor tags/links from the page
+  const deleteLinks = global.document.getElementsByClassName('deleteUser');
+
+  //Iterate the delete links = deleteLinks
+  //Attach a click function to each delete link  with no change to the url
+  //Remove the table row of that Delete Link from the DOM
+  Array.from(deleteLinks, link => {
+    link.onclick = function(event){
+      const element = event.target;
+      event.preventDefault();
+      deleteUser(element.attributes["data-id"].value);
+      const row = element.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+    };
+  });
+
 });
 
 

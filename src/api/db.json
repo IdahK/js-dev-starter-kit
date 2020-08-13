@@ -1,1 +1,16 @@
-{"users":[{"id":68256423,"firstName":"Sonia","lastName":"Bins","email":"Alessandra.Toy77@hotmail.com"},{"id":18713359,"firstName":"Kamron","lastName":"Kshlerin","email":"Maurice68@hotmail.com"},{"id":42994714,"firstName":"Ashly","lastName":"Oberbrunner","email":"Mireya58@hotmail.com"}]}
+{
+  "users": [
+    {
+      "id": 18713359,
+      "firstName": "Kamron",
+      "lastName": "Kshlerin",
+      "email": "Maurice68@hotmail.com"
+    },
+    {
+      "id": 42994714,
+      "firstName": "Ashly",
+      "lastName": "Oberbrunner",
+      "email": "Mireya58@hotmail.com"
+    }
+  ]
+}
