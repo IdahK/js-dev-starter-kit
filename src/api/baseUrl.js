@@ -1,7 +1,7 @@
 /* Checks the URL to determine if the app is running on dev or prod*/
 
 export default function getBaseUrl(){
-  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' :'/';
+  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' :'https://morning-brook-16872.herokuapp.com/';
   // const inDevelopment = window.location.hostname === 'localhost';
   // return inDevelopment ? 'http://localhost:3001/' : '/';
 }
