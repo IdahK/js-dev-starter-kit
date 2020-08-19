@@ -1,5 +1,5 @@
-import path from 'path';
 import webpack from 'webpack';
+import path from 'path';
 
 export default {
   debug: true,
@@ -19,7 +19,7 @@ export default {
     new webpack.optimize.DedupePlugin(),
 
     //Minify JS
-    new.webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin()
   ],
   module: {
     loaders: [
