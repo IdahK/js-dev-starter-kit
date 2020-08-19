@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
   debug: true,
@@ -15,8 +16,27 @@ export default {
     filename: 'bundle.js'
   },
   plugins: [
+
+    // Generates a HTML File dynamically that includes reference to created bundle JS
+    new HtmlWebpackPlugin({
+      template: 'src/index.html', //uses user defined html as template
+      minify:{ // minify generated html
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true
+      },
+      inject: true //inject script tags dynamically
+    }),
+
     //Eliminate duplicate packages when generating bundle
-    new webpack.optimize.DedupePlugin(),
+    new  webpack.optimize.DedupePlugin(),
 
     //Minify JS
     new webpack.optimize.UglifyJsPlugin()
