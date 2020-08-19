@@ -46,7 +46,9 @@ export default {
         minifyCSS: true,
         minifyURLs: true
       },
-      inject: true //inject script tags dynamically
+      inject: true, //inject script tags dynamically
+
+      trackJSToken: '' //TrackJS Assigned Token -- INSERT here
     }),
 
     //Eliminate duplicate packages when generating bundle
