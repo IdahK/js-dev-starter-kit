@@ -15,3 +15,7 @@ In this Starter Project for JS Development Environment,I have configured :
 - #### Linting using `ESLint`
 - #### Testing using `Mocha Framework` and `Chai Assertion Library`
 - #### Continuous Integration using `Travis CI` and `Appveyor`
+- ### Project Building via Webpack
+- ### Production Error Logging via Track.js
+- ### Automatic API Deployment via Heroku
+- ### Automatic UI Deployment via Surge
