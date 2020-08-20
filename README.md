@@ -1,9 +1,7 @@
 # js-dev-starter-kit
 This JavaScript Starter Kit serves as a foundation for a rapid modern automated javascript development environment. 
 
-You  can use this for Vanilla o JS-based Web apps while using Node as a build tool.
-
-You  can use this for JS-based Web apps while using Node as a build tool.
+You  can use this for Vanilla or JS-based Web apps while using Node as a build tool.
 
 In this Starter Project for JS Development Environment,I have configured :
 - #### Editor Configuration using ` EditorConfig`
